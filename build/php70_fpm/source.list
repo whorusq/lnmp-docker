@@ -1,0 +1,15 @@
+# 中科大更新源 http://mirrors.ustc.edu.cn/help/debian.html
+# 6 squeeze、7 wheezy、8 jessie、9 stretch
+# php:7.0-fpm 对应 9 stretch
+
+deb http://mirrors.ustc.edu.cn/debian/ stretch main contrib non-free
+deb-src http://mirrors.ustc.edu.cn/debian/ stretch main contrib non-free
+
+deb http://mirrors.ustc.edu.cn/debian/ stretch-updates main contrib non-free
+deb-src http://mirrors.ustc.edu.cn/debian/ stretch-updates main contrib non-free
+
+deb http://mirrors.ustc.edu.cn/debian/ stretch-backports main contrib non-free
+deb-src http://mirrors.ustc.edu.cn/debian/ stretch-backports main contrib non-free
+
+deb http://mirrors.ustc.edu.cn/debian-security/ stretch/updates main contrib non-free
+deb-src http://mirrors.ustc.edu.cn/debian-security/ stretch/updates main contrib non-free
