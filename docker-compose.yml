@@ -1,6 +1,7 @@
 ##############################################################
 # LNAMP 开发环境
 # 应用：Nginx、PHP with FPM、MySQL
+# 说明：通过修改 VERSION 及 image 后面的版本号以切换到不同版本启动
 ##############################################################
 
 version: '3'
@@ -9,6 +10,8 @@ version: '3'
 services:
 
   # Nginx
+  # 版本：1.12、1.14（默认）、1.16
+  # https://hub.docker.com/_/nginx
   nginx:
     build:
       context: ./build/nginx
@@ -41,9 +44,11 @@ services:
       - lnmp-net-bakend
 
   # PHP with fpm
+  # 版本：5.6、7.0（默认）、7.1、7.2、7.3
+  # https://hub.docker.com/_/php
   php_fpm:
     build:
-      context: ./build/php70_fpm
+      context: ./build/php_fpm
       args:
         - VERSION=7.0
     image: lnmp/php_fpm:7.0
@@ -67,7 +72,9 @@ services:
     networks:
       - lnmp-net-bakend
 
-  # MySQL 5.7
+  # MySQL
+  # 版本：5.6、5.7（默认）、8.0
+  # https://hub.docker.com/_/mysql
   mysql:
     build:
       context: ./build/mysql
