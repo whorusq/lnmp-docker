@@ -16,7 +16,7 @@
 │   │   └── Dockerfile
 │   ├── nginx
 │   │   └── Dockerfile
-│   └── php70_fpm
+│   └── php_fpm
 │       ├── Dockerfile
 │       ├── ext
 │       │   ├── READEME.md
@@ -34,8 +34,6 @@
 │   │       └── www.conf
 │   └── php_fpm
 │       ├── php.ini
-│       ├── sock
-│       │   └── php70-fpm.sock
 │       └── zz-docker.conf
 ├── data
 ├── docker-compose.yml
@@ -94,3 +92,14 @@
 	# 停止服务，并删除容器
 	➜  docker-compose down
 	```
+
+### 3. 切换版本
+
+打开 `docker-compose.yml` 文件，修改 `VERSION` 和 `image` 后面的版本号，二者保持一致。
+
+重启
+
+```
+docker-compose down
+docker-compose up
+```
