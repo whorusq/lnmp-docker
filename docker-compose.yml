@@ -48,7 +48,7 @@ services:
   # https://hub.docker.com/_/php
   php_fpm:
     build:
-      context: ./build/php_fpm
+      context: ./build/php70_fpm
       args:
         - VERSION=7.0
     image: lnmp/php_fpm:7.0
